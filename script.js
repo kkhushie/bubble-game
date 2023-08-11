@@ -1,6 +1,6 @@
 let gameBox = document.querySelector(".cbody")
 
-let timer = 10
+let timer = 60
 let score = 0;
 let htval;
 let hitvalue = document.querySelector("#hitval")
