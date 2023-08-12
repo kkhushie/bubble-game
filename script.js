@@ -36,7 +36,7 @@ const runTime = () => {
         else {
             clearInterval(timerr)
             overSound.play()
-            gameBox.innerHTML = `<div class="ending"><h1 style="font-size:70px">game Over</h1><h2>Score : ${score}</h2></div>`
+            gameBox.innerHTML = `<div class="ending"><h1 style="font-size:70px;text-align:center">game Over</h1><h2>Score : ${score}</h2></div>`
 
         }
     }, 1000);
