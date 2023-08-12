@@ -1,4 +1,7 @@
 let gameBox = document.querySelector(".cbody")
+let hitSound = new Audio("hit.wav")
+let misSound = new Audio("wrong.wav")
+let overSound = new Audio("over.mp3")
 
 let timer = 60
 let score = 0;
@@ -32,6 +35,7 @@ const runTime = () => {
         }
         else {
             clearInterval(timerr)
+            overSound.play()
             gameBox.innerHTML = `<div class="ending"><h1 style="font-size:70px">game Over</h1><h2>Score : ${score}</h2></div>`
 
         }
@@ -50,9 +54,14 @@ gameBox.addEventListener("click", (dets) => {
     let htnbtn = Number(dets.target.textContent);
     // console.log(htnbtn)
     if (htnbtn === htval) {
+        hitSound.play()
         increaseScore()
         makebubble()
         changeHitval()
+
+    }
+    else{
+        misSound.play()
 
     }
 
