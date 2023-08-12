@@ -44,7 +44,7 @@ const changeHitval = () => {
 }
 
 //Timer
-let timer = 10
+let timer = 60
 document.querySelector("#timeval").textContent = timer
 let endGame=document.querySelector(".ending")
 const runTime = () => {
